@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\KategoriaController;
+use App\Http\Controllers\KategoriakController;
 use App\Http\Controllers\ProfileController;
-
+use App\Http\Controllers\ReceptekController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('welcome');
+    return view('index');
 });
 
 Route::get('/dashboard', function () {
@@ -30,10 +32,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// Route::get("/", [::class, "index"]);
-// Route::get("//{id}", [:class, "show"]);
-// Route::post("/", [::class, "store"]);
-// Route::put("//{id}", [::class, "update"]);
-// Route::delete("//{id}", [::class, "destroy"]);
+Route::get("/receptek", [ReceptekController::class, "index"]);
+Route::get("/receptek/{id}", [ReceptekController::class, "show"]);
+Route::post("/receptek", [ReceptekController::class, "store"]);
+Route::put("/receptek/{id}", [ReceptekController::class, "update"]);
+Route::delete("/receptek/{id}", [ReceptekController::class, "destroy"]);
+
+Route::get("/kategoriak", [KategoriakController::class, "index"]);
+Route::get("/kategoriak/{id}", [KategoriakController::class, "show"]);
+Route::post("/kategoriak", [KategoriakController::class, "store"]);
+Route::put("/kategoriak/{id}", [KategoriakController::class, "update"]);
+Route::delete("/kategoriak/{id}", [KategoriakController::class, "destroy"]);
 
 require __DIR__.'/auth.php';
