@@ -47,4 +47,14 @@ class ReceptekController extends Controller
     {
         Receptek::find($id)->delete();
     }
+
+    public function kategoriaraSzures($kategoria)
+    {
+        $receptek=DB::table('receptek as r')
+        ->select('k.nev as kategoria_nev', 'r.*')
+        ->join('kategoriak as k', 'r.kat_id', 'k.id')
+        ->where('kat_id', $kategoria)
+        ->get();
+        return $receptek;
+    }
 }

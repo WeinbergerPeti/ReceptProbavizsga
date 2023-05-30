@@ -6,6 +6,8 @@ class ReceptTablazat
     {
         console.log("receptek");
 
+        console.log(tomb);
+
         $(szuloElem).html(
         `<table class="table">
             <tr>

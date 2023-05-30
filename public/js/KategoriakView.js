@@ -2,9 +2,11 @@ import ReceptView from "./KategoriaView.js";
 
 class KategoriakView
 {
+    
     constructor(tomb, szuloElem)
     {
-        $(szuloElem).html(`<select id="szures"><option vlaue="mindegyik" >Mindegyik</option></select>`);
+        this.ertek;
+        $(szuloElem).html(`<select id="szures"><option value="0">Mindegyik</option></select>`);
 
         this.selectElem=szuloElem.children("select:last-child")
 
@@ -12,6 +14,19 @@ class KategoriakView
         {
             new ReceptView(elem, this.selectElem);    
         });
+
+        $(`#szures`).on("change", ()=>
+        {
+            this.ertek=$("option:selected").val();
+            console.log(this.ertek);
+            this.kattintasTrigger("kategoriaSzures");
+        })
+    }
+
+    kattintasTrigger(esemenyNeve)
+    {
+        const esemeny = new CustomEvent(esemenyNeve, {detail: this.ertek});
+        window.dispatchEvent(esemeny);
     }
 }
 export default KategoriakView;

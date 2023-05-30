@@ -44,4 +44,6 @@ Route::post("/kategoriak", [KategoriakController::class, "store"]);
 Route::put("/kategoriak/{id}", [KategoriakController::class, "update"]);
 Route::delete("/kategoriak/{id}", [KategoriakController::class, "destroy"]);
 
+Route::get("/kategoria_szures/{id}", [ReceptekController::class, "kategoriaraSzures"]);
+
 require __DIR__.'/auth.php';

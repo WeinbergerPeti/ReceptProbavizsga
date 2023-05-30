@@ -21,6 +21,19 @@ class IndexController
             console.log(event.detail);
             this.egyRecept(event.detail)
         })
+
+        $(window).on("kategoriaSzures", (event)=>
+        {
+            console.log(event.detail);
+            if(event.detail==0)
+            {
+                adatFeldolgozModel.adatBe("/receptek", this.receptAdatok);
+            }
+            else
+            {
+                adatFeldolgozModel.adatBe("/kategoria_szures/"+event.detail, this.receptAdatok);
+            }
+        })
     }
 
     kategoriaAdatok(tomb)
