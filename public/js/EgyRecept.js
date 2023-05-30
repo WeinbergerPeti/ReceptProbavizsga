@@ -7,7 +7,7 @@ class EgyRecept
         $(szuloElem).html(
             `<p>${elem.nev}</p>
             <p>${elem.kategoria_nev}</p>
-            <p>${elem.kep_eleresi_ut}</p>
+            <p><img src="${elem.kep_eleresi_ut}" alt""></p>
             <p>${elem.leiras}</p>`
         )
     }

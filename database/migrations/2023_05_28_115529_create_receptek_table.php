@@ -21,10 +21,10 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        Receptek::create(["nev" => "Somlói", "kat_id" => 2, "kep_eleresi_ut" => "Somlói", "leiras" => "Somlói"]);
-        Receptek::create(["nev" => "Lasagne", "kat_id" => 1, "kep_eleresi_ut" => "Lasagne", "leiras" => "Lasagne"]);
-        Receptek::create(["nev" => "Borsó leves", "kat_id" => 3, "kep_eleresi_ut" => "Borsó leves", "leiras" => "Borsó leves"]);
-        Receptek::create(["nev" => "Cézár saláta", "kat_id" => 4, "kep_eleresi_ut" => "Cézár saláta", "leiras" => "Cézár saláta"]);
+        Receptek::create(["nev" => "Somlói", "kat_id" => 2, "kep_eleresi_ut" => "https://cdn.nwmgroups.hu/s/img/i/1408/20140807foto-szelfie-makako-majom-fenykep.jpg?w=800&h=1106&t=5", "leiras" => "Somlói"]);
+        Receptek::create(["nev" => "Lasagne", "kat_id" => 1, "kep_eleresi_ut" => "https://cdn.nwmgroups.hu/s/img/i/1408/20140807foto-szelfie-makako-majom-fenykep.jpg?w=800&h=1106&t=5", "leiras" => "Lasagne"]);
+        Receptek::create(["nev" => "Borsó leves", "kat_id" => 3, "kep_eleresi_ut" => "https://cdn.nwmgroups.hu/s/img/i/1408/20140807foto-szelfie-makako-majom-fenykep.jpg?w=800&h=1106&t=5", "leiras" => "Borsó leves"]);
+        Receptek::create(["nev" => "Cézár saláta", "kat_id" => 4, "kep_eleresi_ut" => "https://cdn.nwmgroups.hu/s/img/i/1408/20140807foto-szelfie-makako-majom-fenykep.jpg?w=800&h=1106&t=5", "leiras" => "Cézár saláta"]);
     }
 
     /**

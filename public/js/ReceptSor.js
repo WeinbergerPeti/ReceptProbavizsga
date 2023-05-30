@@ -9,7 +9,7 @@ class ReceptSor
             `<tr>
                 <td>${elem.nev}</td>
                 <td>${elem.kategoria_nev}</td>
-                <td>${elem.kep_eleresi_ut}</td>
+                <td><img src="${elem.kep_eleresi_ut}" alt=""></td>
                 <td>${elem.leiras}</td>
                 <td><button id="gomb${elem.id}">Kiválasztás</button></td>
             </tr>`
